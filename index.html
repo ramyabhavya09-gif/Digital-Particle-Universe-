@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070816">
+  <meta name="description" content="Explore an interactive universe of glowing digital particles.">
+  <title>Digital Particle Universe</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <canvas id="universe" aria-label="Interactive animated particle universe"></canvas>
+
+  <main class="app">
+    <header class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> INTERACTIVE EXPERIENCE</div>
+      <h1>Digital <span>Universe</span></h1>
+      <p>Explore the beauty of particles, light and motion.</p>
+    </header>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <span class="small-label">YOUR UNIVERSE</span>
+          <h2>Control Center</h2>
+        </div>
+        <span class="status"><span class="live-dot"></span> LIVE</span>
+      </div>
+
+      <div class="control-group">
+        <div class="label-row">
+          <label for="particleCount">Particle density</label>
+          <span id="countValue">120</span>
+        </div>
+        <input id="particleCount" type="range" min="40" max="220" value="120">
+      </div>
+
+      <div class="control-group">
+        <div class="label-row">
+          <label for="speed">Animation speed</label>
+          <span id="speedValue">1.0×</span>
+        </div>
+        <input id="speed" type="range" min="1" max="30" value="10">
+      </div>
+
+      <div class="control-group">
+        <label for="colorTheme">Cosmic color</label>
+        <select id="colorTheme">
+          <option value="cosmic">Cosmic Purple</option>
+          <option value="ocean">Electric Ocean</option>
+          <option value="fire">Solar Fire</option>
+          <option value="forest">Neon Forest</option>
+          <option value="rainbow">Rainbow</option>
+        </select>
+      </div>
+
+      <div class="toggle-row">
+        <div>
+          <strong>Particle connections</strong>
+          <p>Connect nearby particles with light.</p>
+        </div>
+        <label class="switch">
+          <input id="connections" type="checkbox" checked>
+          <span class="switch-track"></span>
+          <span class="sr-only">Toggle particle connections</span>
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="burstButton" class="primary">✦ Cosmic Burst</button>
+        <button id="resetButton" class="secondary">↻ Reset</button>
+      </div>
+    </section>
+
+    <div class="hint">✧ Move your cursor or touch the screen to interact</div>
+
+    <footer>
+      <span>MADE OF LIGHT &amp; CODE</span>
+      <span id="particleStatus">120 PARTICLES</span>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
